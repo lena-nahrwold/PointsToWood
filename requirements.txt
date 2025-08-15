@@ -1,8 +1,4 @@
-torch-scatter -f https://data.pyg.org/whl/torch-2.5.1+cu121.html
-torch-sparse -f https://data.pyg.org/whl/torch-2.5.1+cu121.html
-torch-cluster -f https://data.pyg.org/whl/torch-2.5.1+cu121.html
-torch-spline-conv -f https://data.pyg.org/whl/torch-2.5.1+cu121.html
-torch-geometric
 pandas
 pykdtree
 numba
+laspy

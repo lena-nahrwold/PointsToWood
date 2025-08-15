@@ -3,6 +3,7 @@ import argparse
 import numpy as np
 import pandas as pd
 import os 
+import laspy
 
 '''
 Read and write PLY formatted point clouds--------------------------------------------------------------------------------------------
@@ -18,7 +19,7 @@ def read_ply(fp, newline=None):
         length = 0
         prop = []
         dtype_map = {'uint16':'uint16', 'uint8':'uint8', 'double':'d', 'float64':'f8', 
-                     'float32':'f4', 'float': 'f4', 'uchar': 'B', 'int':'i'}
+                     'float32':'f4', 'float':'f4', 'uchar':'B', 'int':'i', 'int16':'i2'}
         dtype = []
         fmt = 'binary'
     
