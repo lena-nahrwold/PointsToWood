@@ -103,14 +103,15 @@ Then to run the semantic segmentation use:
 ``` 
 docker run --gpus all -it \
   -v /path/to/input_data:/opt/data \
-  -v /pointstowood/model:/opt/pointstowood/model \
+  -v /path/to/PointsToWood/pointstowood/model:/opt/PointsToWood/pointstowood/model \
   pointstowood \
-  python3 /opt/pointstowood/predict.py \
+  python3 predict.py \
     --point-cloud /opt/data/name_of_pointcloud.ply \
     --model global.pth \
     --batch_size 8 \
     --is-wood 0.50 \
     --grid_size 2.0 4.0 \
     --min_pts 128 \
-    --max_pts 16384;
+    --max_pts 16384
+    --verbose;
 ```
