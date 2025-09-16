@@ -199,3 +199,25 @@ Lightweight models optimized for specific biomes:
 
 <sub>Harry, J. F. O., Emily, L., & Grieve, S. (2024). Plot-level semantically labelled terrestrial laser scanning point clouds (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.13268500<</sub>
 
+## Docker
+To build a Docker container with all the libraries installed use:
+```
+docker build -t pointstowood .
+```
+
+Then to run the semantic segmentation use:
+``` 
+docker run --gpus all -it \
+  -v /path/to/input_data:/opt/data \
+  -v /path/to/PointsToWood/pointstowood/model:/opt/PointsToWood/pointstowood/model \
+  pointstowood \
+  python3 predict.py \
+    --point-cloud /opt/data/name_of_pointcloud.ply \
+    --model fbeta-eu.pth \
+    --batch_size 8 \
+    --is-wood 0.50 \
+    --grid_size 2.0 4.0 \
+    --min_pts 128 \
+    --max_pts 16384
+    --verbose;
+```

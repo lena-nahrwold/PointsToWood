@@ -95,3 +95,5 @@ dmypy.json
 # Temporary files
 *.tmp
 *.temp
+
+/results/
