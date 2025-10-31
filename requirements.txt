@@ -6,3 +6,5 @@ torch-geometric
 pandas
 pykdtree
 numba
+numpy
+sparsemax

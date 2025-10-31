@@ -242,10 +242,10 @@ docker run --gpus all -it \
   python3 predict.py \
     --point-cloud /opt/data/name_of_pointcloud.ply \
     --model fbeta-eu.pth \
-    --batch_size 8 \
+    --batch-size 8 \
     --is-wood 0.50 \
-    --grid_size 2.0 4.0 \
-    --min_pts 128 \
-    --max_pts 16384
+    --grid-size 2.0 4.0 \
+    --min-pts 128 \
+    --max-pts 16384
     --verbose;
 ```
